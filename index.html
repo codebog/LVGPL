@@ -6,13 +6,61 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Lvgpl : web">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<style> 
 
-    <title>GPL is coming!!!</title>
+html { 
+background: url(./images/bk.jpg) no-repeat center center fixed; 
+
+-webkit-background-size: cover; 
+-moz-background-size: cover; 
+-o-background-size: cover; 
+background-size: cover; 
+} 
+</style> 
+   
+    <title>Lavish's GPL is coming!!!</title>
   </head>
 
-  <body>
+  <body ><br><br><br><br><br><br><br><br>
+  
+ <center><span style="font-family: Calibri; font-size: 200px; color: #E61111;" id="countdown">GPL...</span>
+ <br><br><br><br><span style="font-family: Comic sans ms; font-size: 50px; color: #ffffff;" id="we">We are waiting......</span>
+ 
+ 
+ </center>
+ 
+<script type="text/javascript">  
+ var target_date = new Date("Aug 17, 2014").getTime();
+ 
+// variables for time units
+var days, hours, minutes, seconds;
+ 
+// get tag element
+var countdown = document.getElementById("countdown");
+ 
+// update the tag with id "countdown" every 1 second
+setInterval(function () {
+ 
+    // find the amount of "seconds" between now and target
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+ 
+    // do some time calculations
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+     
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+     
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+     
+    // format countdown string + set tag value
+    countdown.innerHTML = days + " : " + hours + " : "
+    + minutes + " : " + seconds + "  ";  
+ 
+}, 1000);
+</script>
 
-    
   </body>
 </html>
