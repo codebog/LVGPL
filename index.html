@@ -30,7 +30,7 @@ but before that we're gonna smash your cute little (|)<br>
   
 <br><br>
  <span style="font-family: Calibri; font-size: 200px; color: #E61111;" id="countdown">GPL...</span><br><br>
- <br><br><br><br><span style="font-family: Comic Sans Ms; font-size: 50px; color: #0000ff;">GPL is coming!!!!!</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-family: Comic sans ms; font-size: 50px; color: #ffffff;" id="we">We are ready......</span>
+ <br><br><br><br><span style="font-family: Comic Sans Ms; font-size: 50px; color: #0000ff;" id="s">GPL is coming!!!!!</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="font-family: Comic sans ms; font-size: 50px; color: #ffffff;" id="we">We are ready......</span>
 
 
  
@@ -42,20 +42,20 @@ but before that we're gonna smash your cute little (|)<br>
 <script type="text/javascript">  
  var target_date = new Date("Aug 17, 2014").getTime();
  
-// variables for time units
+
 var days, hours, minutes, seconds;
  
-// get tag element
+
 var countdown = document.getElementById("countdown");
  
-// update the tag with id "countdown" every 1 second
+var i=1;var j=1;
 setInterval(function () {
  
-    // find the amount of "seconds" between now and target
+    
     var current_date = new Date().getTime();
     var seconds_left = (target_date - current_date) / 1000;
  
-    // do some time calculations
+   
     days = parseInt(seconds_left / 86400);
     seconds_left = seconds_left % 86400;
      
@@ -64,10 +64,13 @@ setInterval(function () {
      
     minutes = parseInt(seconds_left / 60);
     seconds = parseInt(seconds_left % 60);
-     
+    if(hours<=0 && days<=0 && minutes<=0 && seconds<=0){ 
+   if(i==1){ s.remove();i++}if(j==1){ we.remove();j++}
+   countdown.style.fontSize="200px"; 
+   countdown.style.color=getRandomColor();countdown.innerHTML="Happy B'Day"+"<br>"+" Lavish  !"+"<br>";}  
     // format countdown string + set tag value
-    countdown.innerHTML = days + " : " + hours + " : "
-    + minutes + " : " + seconds + "  ";  
+    else {countdown.innerHTML = days + " : " + hours + " : "
+    + minutes + " : " + seconds + "  "; } 
  
 }, 1000);
 </script>
